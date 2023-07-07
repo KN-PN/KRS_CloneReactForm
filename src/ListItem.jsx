@@ -1,6 +1,7 @@
-import React from 'react'
+// import React from 'react'
 import PropTypes from 'prop-types';
 import Item from './Item'
+import { v4 as uuidv4 } from 'uuid';
 
 function ListItem(props) {
     const items = props.items;
@@ -17,7 +18,7 @@ function ListItem(props) {
                         console.log('name: ', name);
                         console.log('amount: ', amount);
 
-                        return <Item title={title} amount={amount}></Item>
+                        return <Item key={uuidv4()} title={title} amount={amount}></Item>
                     })
                 }
             </ul>
