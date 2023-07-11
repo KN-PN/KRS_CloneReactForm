@@ -5,16 +5,16 @@
 > git init  
 > git add README.md  
 > git commit -m "first commit"  
-> git branch -M main  
+> git branch -M [branch name]  
 > git remote add origin https://github.com/killazaold/test001.git  
-> git push -u origin main  
+> git push -u origin [branch name]  
 
 ## …or push an existing repository from the command line  
 > git remote add origin https://github.com/killazaold/test001.git  
-> git branch -M main  
-> git push -u origin main  
+> git branch -M [branch name]  
+> git push -u origin [branch name]  
 
 
 > git add .  
 > git commit -m "comment message"  
-> git push origin [branch name]  
+> git push -u origin [branch name]  
