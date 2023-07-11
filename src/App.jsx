@@ -7,7 +7,6 @@ import FormComponent from './FormComponent'
 import ListItem from './ListItem'
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   const styleHeader = {
     color: 'red', textAlign: 'center'
@@ -15,22 +14,18 @@ function App() {
 
   const [listItem, setListItem] = useState([])
 
-  const getItems = (prevItems) => {
-    console.log('prevItems: ', prevItems);
-    console.log('listItem: ', listItem);
-    // setListItem((item) => [item, ...prevItems])
-    setListItem((item) => [prevItems, ...item])
+  const getItems = (item) => {
+    setListItem((prevState) => [...prevState, item])
   }
 
   return (
-
     <div className='container'>
-      <h1 style={styleHeader}></h1>
+      <h1 style={styleHeader}>Clone React Form App</h1>
       <FormComponent getItems={getItems}></FormComponent>
       <ListItem items={listItem}></ListItem>
     </div>
-
   )
+
 }
 
 export default App

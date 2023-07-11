@@ -1,10 +1,11 @@
 // import React from 'react'
-import React, { useState, useRef } from 'react';
+// import React, { useState, useRef } from 'react';
+import { useRef } from 'react';
 import './FormComponent.css'
 
-function FormComponent(props) {
+import PropTypes from 'prop-types'
 
-    // const [formData, setFormData] = useState([])
+function FormComponent(props) {
 
     let ref = useRef({
         name: '',
@@ -22,16 +23,12 @@ function FormComponent(props) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('Save !!');
 
         const { name, amount } = ref.current
-
         const updateData = {
             name,
             amount: parseFloat(amount)
         }
-
-        // setFormData(updateData);
 
         console.log(updateData);
 
@@ -61,4 +58,11 @@ function FormComponent(props) {
     )
 }
 
+FormComponent.propTypes = {
+    getItems: PropTypes.func
+}
+
 export default FormComponent
+
+
+
