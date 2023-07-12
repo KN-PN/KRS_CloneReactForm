@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import Item from './Item'
-import { v4 as uuidv4 } from 'uuid';
 
 import styled from 'styled-components';
-
 
 const UL = styled.ul`
     padding-left: 0;
@@ -16,8 +14,8 @@ function ListItem(props) {
             <h2>ListItem</h2>
             <UL>
                 {
-                    items.map(({ name: title, amount }) => {
-                        return <Item key={uuidv4()}
+                    items.map(({ name: title, amount, id }) => {
+                        return <Item key={id}
                             title={title}
                             amount={amount}></Item>
                     })
