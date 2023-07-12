@@ -1,5 +1,3 @@
-// import React from 'react'
-// import React, { useState, useRef } from 'react';
 import { useRef } from 'react';
 import './FormComponent.css'
 
