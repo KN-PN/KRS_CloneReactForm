@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
   font-family: 'Prompt', sans-serif;
+  color: #3a3a3a;
 }
 
 body {
@@ -15,9 +16,16 @@ body {
   margin: 0;
 }
 
+
 .container {
   margin: 30px auto;
-  width: 350px;
+  width: 60%;
+  min-width: 400px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
 }
 
 .horizontal-menu {
